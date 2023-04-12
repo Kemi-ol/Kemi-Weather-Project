@@ -1,0 +1,123 @@
+h1 {
+  padding: 10px;
+  display: block;
+  color: black;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 10px;
+}
+h2 {
+  margin: 0 auto;
+  text-align: center;
+}
+h2,
+h3 {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-size: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin: 0 auto;
+  text-align: center;
+  padding: 12px;
+}
+form {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 50%;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  margin-top: 70px;
+  margin-left: 200px;
+  align-items: center;
+}
+body {
+  background-image: url("media/white-cloud-blue-sky.jpg");
+  background-size: cover;
+}
+input {
+  all: unset;
+  color: black;
+  height: 100%;
+  width: 90%;
+  padding: 6px 10px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+}
+button {
+  cursor: pointer;
+  all: unset;
+  width: 20px;
+  height: 20px;
+}
+.placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+.cloud-icon {
+  font-size: 160px;
+  margin-top: 50px;
+  margin-left: 100px;
+}
+ul {
+  list-style-type: none;
+  text-align: left;
+  font-size: 20px;
+  line-height: 2;
+}
+img {
+  width: 20px;
+  height: 100px;
+}
+.content {
+  max-width: 1000px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  border: 4px solid red;
+  border-radius: 10px;
+}
+.col-container {
+  padding: 50px 10px;
+}
+.col-forecast {
+  margin-top: 50px;
+}
+#location {
+  font-size: 20px;
+  display: block;
+  text-align: center;
+  padding: 5px;
+}
+#current-city {
+  font-size: 10px;
+  text-align: center;
+  font-style: italic;
+}
+#current-date {
+  font-size: 12px;
+  text-align: center;
+}
+#temperature {
+  font-size: 30px;
+  text-align: center;
+}
+.local-details {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+#cloudy {
+  font-size: 16px;
+  font-style: italic;
+  line-height: 0.8;
+}
+#temp-value {
+  text-align: center;
+  display: block;
+  position: relative;
+  top: -20px;
+}
+#current-location-button {
+  text-align: center;
+  position: relative;
+  right: -100px;
+  border: 1px solid red;
+}
