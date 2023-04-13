@@ -104,10 +104,10 @@ img {
   line-height: 0.8;
   text-align: center;
 }
-#temp-value {
+#temp-value #farenheit {
   text-align: center;
   display: block;
-  font-size: 25px;
+  font-size: 20px;
 }
 #current-location-button {
   text-align: center;
