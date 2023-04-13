@@ -122,6 +122,10 @@ img {
   text-align: center;
   margin-top: -15px;
 }
+#current-icon {
+  height: 30px;
+  width: 30px;
+}
 footer {
   text-align: center;
 }
