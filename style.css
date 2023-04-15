@@ -104,9 +104,11 @@ img {
   line-height: 0.8;
   text-align: center;
   display: block;
-  text-transform: capitalize;
 }
 
+#cloudy::first-letter {
+  text-transform: capitalize;
+}
 #temp-value #farenheit {
   text-align: center;
   display: block;
