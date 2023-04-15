@@ -103,6 +103,7 @@ img {
   font-style: italic;
   line-height: 0.8;
   text-align: center;
+  text-transform: capitalize;
 }
 #temp-value #farenheit {
   text-align: center;

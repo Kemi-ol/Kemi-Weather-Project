@@ -12,7 +12,8 @@ function displayWeather(response) {
   document.querySelector("#wind-speed").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector("#cloudy").innerHTML = response.data.weather[0].main;
+  document.querySelector("#cloudy").innerHTML =
+    response.data.weather[0].description;
   document.querySelector("#main-weather-icon").innerHTML = null;
   {
     let actualTemp = Math.round(response.data.main.temp);
