@@ -103,8 +103,10 @@ img {
   font-style: italic;
   line-height: 0.8;
   text-align: center;
+  display: block;
   text-transform: capitalize;
 }
+
 #temp-value #farenheit {
   text-align: center;
   display: block;
@@ -124,8 +126,14 @@ img {
   margin-top: -15px;
 }
 #current-icon {
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
+}
+#centigrade,
+#farenheit {
+  position: relative;
+  top: -7px;
+  font-size: 10px;
 }
 footer {
   text-align: center;

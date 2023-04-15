@@ -14,7 +14,6 @@ function displayWeather(response) {
   );
   document.querySelector("#cloudy").innerHTML =
     response.data.weather[0].description;
-  document.querySelector("#main-weather-icon").innerHTML = null;
   {
     let actualTemp = Math.round(response.data.main.temp);
     let actualTempElement = document.querySelector("#temp-value");
@@ -25,8 +24,15 @@ function displayWeather(response) {
     let humidityElement = document.querySelector("#humidityTemp");
     humidityElement.innerHTML = `${humidity}%`;
   }
+  {
+    let iconElement = document.querySelector("#current-icon");
+    iconElement.setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+    iconElement.setAttribute("alt", response.data.weather[0].description);
+  }
 }
-
 function searchLocation(response) {
   let apiKey = "4de6f78efdcff22546b533360a84173a";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${response.coords.latitude}&lon=${response.coords.longitude}&appid=${apiKey}&units=metric`;
