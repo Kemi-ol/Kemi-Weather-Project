@@ -67,11 +67,31 @@ function search(event) {
   let city = document.querySelector("#text-input").value;
   defaultSearch(city);
 }
+function displayFarenheitTemp(event) {
+  event.preventDefault();
+  let tempValue = document.querySelector("#temp-value");
+  if (farenheitTemp) {
+    tempValue.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
+    farenheitTemp.classList.add("active");
+    celsiusTemp.classList.remove("active");
+  }
+}
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  if (celsiusTemp) {
+    celsiusNumber.innerHTML = Math.round(celsiusTemperature);
+    celsiusTemp.classList.add("active");
+    farenheitTemp.classList.remove("active");
+  }
+}
+let farenheitTemp = document.querySelector("#farenheit");
+farenheitTemp.addEventListener("click", displayFarenheitTemp);
+
+let celsiusTemp = document.querySelector("#centigrade");
+let celsiusNumber = document.querySelector("#temp-value");
+celsiusTemp.addEventListener("click", displayCelsiusTemp);
 
 let celsiusTemperature = null;
-
-let farenheitTemp = document.querySelector("#farenheit");
-farenheitTemp.addEventListener("click", switchTemp);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
@@ -80,19 +100,3 @@ let searchForm = document.querySelector("#weather-form");
 searchForm.addEventListener("submit", search);
 
 defaultSearch("London");
-function switchTemp(event) {
-  event.preventDefault();
-  let tempValue = document.querySelector("#temp-value");
-  if (farenheitTemp) {
-    tempValue.innerHTML = Math.round((celsiusTemperature * 9) / 5 + 32);
-  }
-}
-function displayCelsiusTemp(event) {
-  event.preventDefault();
-  if (celsiusTemp) {
-    celsiusNumber.innerHTML = Math.round(celsiusTemperature);
-  }
-}
-let celsiusTemp = document.querySelector("#centigrade");
-let celsiusNumber = document.querySelector("#temp-value");
-celsiusTemp.addEventListener("click", displayCelsiusTemp);

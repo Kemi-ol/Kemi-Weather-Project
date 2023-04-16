@@ -130,12 +130,25 @@ img {
 #current-icon {
   height: 40px;
   width: 40px;
+  position: relative;
+  top: -5px;
 }
 #centigrade,
 #farenheit {
   position: relative;
-  top: -7px;
-  font-size: 10px;
+  top: -6px;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.local-details .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+  text-decoration: none;
+}
+
+.local-details .active:hover {
+  text-decoration: none;
 }
 footer {
   text-align: center;
