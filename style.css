@@ -56,8 +56,11 @@ button {
   list-style-type: none;
   text-align: left;
   font-size: 20px;
+  padding: 25px;
   line-height: 2;
   background-color: rgba(255, 255, 255, 0.3);
+  font-style: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 img {
   width: 20px;
@@ -68,6 +71,7 @@ img {
   margin: 0 auto;
   border: 4px solid red;
   border-radius: 10px;
+  margin-top: 50px;
 }
 .col-container {
   padding: 50px 10px;
