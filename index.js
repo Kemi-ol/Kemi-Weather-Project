@@ -16,6 +16,26 @@ let day = days[currentDate.getDay()];
 let date = document.querySelector("#current-date");
 date.innerHTML = `${day}, ${hour}:${minute}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+             <div class ="weather-forecast-date"><strong>${day}</strong></div>
+  <img src=" https://openweathermap.org/img/wn/10d@2x.png"/>
+ 
+                    <div class="weather-forecast-temperature">
+                    <span class ="weather-forecast-temp-max"><strong>10º</strong></span><span class ="weather-forecast-temp-min"> 5º</span>
+</div>
+</div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function defaultSearch(city) {
   let apiKey = "4de6f78efdcff22546b533360a84173a";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -42,6 +62,7 @@ function displayWeather(response) {
     let humidityElement = document.querySelector("#humidityTemp");
     humidityElement.innerHTML = `${humidity}%`;
   }
+
   {
     let iconElement = document.querySelector("#current-icon");
     iconElement.setAttribute(
@@ -100,3 +121,4 @@ let searchForm = document.querySelector("#weather-form");
 searchForm.addEventListener("submit", search);
 
 defaultSearch("London");
+displayForecast();
