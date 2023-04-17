@@ -60,8 +60,8 @@ button {
     "Lucida Sans", Arial, sans-serif;
 }
 img {
-  width: 20px;
-  height: 100px;
+  width: 30px;
+  height: 30px;
 }
 .content {
   max-width: 600px;
@@ -73,11 +73,11 @@ img {
   background-size: cover;
   box-shadow: 3em;
 }
-.col-container {
-  padding: 50px 10px;
-}
-.col-forecast {
-  margin-top: 50px;
+.weather-forecast {
+  margin-top: 30px;
+  text-align: center;
+  line-height: 1.1;
+  padding: 5px;
 }
 #location {
   font-size: 30px;
